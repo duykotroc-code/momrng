@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG Roll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game">
+        <h1>🎲 MOM RNG ROLL</h1>
+        <p class="subtitle">Đây là vòng quay mẹ bạn!</p>
+        <div id="result" class="result">
+            ?
+        </div>
+
+        <div id="rarity" class="rarity">
+            ROLL ĐỂ BẮT ĐẦU
+        </div>
+
+        <button id="rollBtn">🎲 ROLL</button>
+
+        <div class="stats">
+            <div>
+                <span>🎯 Rolls</span>
+                <strong id="rollCount">0</strong>
+            </div>
+
+            <div>
+                <span>🏆 Best</span>
+                <strong id="bestRarity">None</strong>
+            </div>
+        </div>
+
+        <div class="history">
+            <h2>📜 Lịch sử</h2>
+            <div id="historyList">
+                Chưa có lần roll nào.
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset">
+            🔄 Reset
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

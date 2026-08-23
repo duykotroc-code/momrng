@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #292957, #0d0d18 60%);
+
+    color: white;
+}
+
+.game {
+    width: 430px;
+    max-width: 95%;
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(25, 25, 45, 0.95);
+    border: 2px solid #44446b;
+    border-radius: 25px;
+
+    box-shadow: 0 0 40px rgba(100, 80, 255, 0.25);
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #aaaac5;
+    margin-bottom: 25px;
+}
+
+.result {
+    width: 170px;
+    height: 170px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    font-size: 65px;
+    font-weight: bold;
+
+    background: #161629;
+    border: 3px solid #55557c;
+
+    transition: 0.2s;
+}
+
+.result.rolling {
+    animation: shake 0.12s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(0.95);
+    }
+
+    100% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+}
+
+.rarity {
+    margin: 20px 0;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    min-height: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #6c5ce7;
+    color: white;
+
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.stats div {
+    flex: 1;
+
+    padding: 15px;
+
+    background: #17172b;
+    border-radius: 15px;
+}
+
+.stats span {
+    display: block;
+    color: #aaaac5;
+    margin-bottom: 5px;
+}
+
+.stats strong {
+    font-size: 20px;
+}
+
+.history {
+    margin-top: 25px;
+
+    background: #151526;
+    padding: 15px;
+
+    border-radius: 15px;
+}
+
+.history h2 {
+    margin-bottom: 10px;
+}
+
+#historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 8px;
+
+    border-radius: 8px;
+
+    background: #22223a;
+
+    font-weight: bold;
+}
+
+.reset {
+    margin-top: 15px;
+
+    background: #34344d;
+    font-size: 16px;
+}
