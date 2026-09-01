@@ -31,9 +31,15 @@ const rarities = [
     },
     {
         name: "Mẹ Hải Phòng",
-        chance: 0.1,
+        chance: 0.09,
         emoji: "🔴",
         color: "#ff7675"
+    },
+    {
+        name: "Mẹ Bạn",
+        chance: 0.01,
+        emoji: "⚫",
+        color: "#251309"
     }
 ];
 
@@ -208,7 +214,7 @@ rollBtn.addEventListener("click", roll);
 resetBtn.addEventListener("click", () => {
 
     const confirmReset =
-        confirm("Địt me mày thích láo nháo không?");
+        confirm("Bạn thích láo nháo không🔪?");
 
     if (!confirmReset) return;
 
